@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <style>
+      th {
+        white-space: nowrap;
+        border-bottom: 1px solid grey;
+        text-align: left;
+        font-weight: normal;
+        padding-top: 0.5em;
+      }
+      td {
+        white-space: nowrap;
+      }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <b style="white-space: nowrap;"><img src='media/webgpu24.png'></img>Page uses WebGPU</b>
+    <table>
+      <tr>
+        <th colspan='2'>Requests made</th>
+      </tr>
+      <tr>
+        <td><b>Adapters:</b></td>
+        <td id='adapters'>0</td>
+      </tr>
+      <tr>
+        <td><b>Devices:</b></td>
+        <td id='devices'>0</td>
+      </tr>
+      <tr>
+        <td><b>Contexts:</b></td>
+        <td id='contexts'>0</td>
+      </tr>
+      <tr>
+        <th colspan='2'>Passes used</th>
+      </tr>
+      <tr>
+        <td><b>Render:</b></td>
+        <td id='renderPass'></td>
+      </tr>
+      <tr>
+        <td><b>Compute:</b></td>
+        <td id='computePass'></td>
+      </tr>
+    </table>
+  </body>
+</html>
