@@ -11,6 +11,42 @@
       td {
         white-space: nowrap;
       }
+      input {
+        border: 0;
+      }
+
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border: 1px solid grey;
+        background-color: #6666FF;
+        color: white;
+        border-radius: 6px;
+        width: 12px;
+        height: 12px;
+        font-size: 0.5em;
+        text-align: center;
+      }
+
+      .tooltip .tooltiptext {
+        font-size: 1.2em;
+        white-space: normal;
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        top: -5px;
+        right: 105%;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
     </style>
     <script src="popup.js"></script>
   </head>
@@ -18,7 +54,11 @@
     <b id='header' style="white-space: nowrap;">No WebGPU use detected</b>
     <table>
       <tr>
-        <th colspan='2'>Requests made</th>
+        <th colspan='2'>Requests made
+          <div class="tooltip">i
+            <span class="tooltiptext">Extension does not detect the use of WebGPU in worker scripts.</span>
+          </div>
+        </th>
       </tr>
       <tr>
         <td><b>Adapters:</b></td>
