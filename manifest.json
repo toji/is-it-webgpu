@@ -11,7 +11,7 @@
     "128": "media/webgpu128.png"
   },
   "permissions": [
-    "tabs", "storage"
+    "activeTab", "storage"
   ],
   "action": {
     "default_title": "Is is WebGPU?",
