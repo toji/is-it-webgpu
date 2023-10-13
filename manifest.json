@@ -3,7 +3,7 @@
   "name": "Is it WebGPU?",
   "description": "Extension that lets you know when a page is using WebGPU",
   "author": "tojiro@gmail.com",
-  "version": "1.0",
+  "version": "1.0.1",
   "icons": {
     "16": "media/webgpu16.png",
     "32": "media/webgpu32.png",

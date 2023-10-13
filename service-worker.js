@@ -1,14 +1,8 @@
-//const webgpuStats = new Map();
-
-// Wrap in an onInstalled callback in order to avoid unnecessary work
-// every time the background script is run
-chrome.runtime.onInstalled.addListener(() => {
-  // Page actions are disabled by default and enabled on select tabs
-  chrome.action.disable();
-});
+// The service worker facilitates communication between the page and the extension action
+// (The button.) When a page reports WebGPU usage the statistics are saved using the storage API
+// for the lifetime of the tab.
 
 function setStats(stats, tabId) {
-  //webgpuStats.set(tabId, stats);
   const insert = {};
   insert[`${tabId}`] = stats;
   chrome.storage.session.set(insert);
